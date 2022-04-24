@@ -17,7 +17,8 @@ services:
       context: .
       dockerfile: ./.docker/php/Dockerfile
     volumes:
-      - './:/var/www'
+      - ./:/var/www
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     working_dir: '/var/www'
     networks:
       - docker-php
